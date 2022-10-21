@@ -1,5 +1,4 @@
 const dataBlocks = document.querySelectorAll(".event__option-data-block");
-let oldPosition = -1;
 
 function showDataBtn(e) {
   e.preventDefault();
@@ -12,13 +11,13 @@ function showDataBtn(e) {
   e.target.classList.add("event__data-btn_disable");
 }
 
-function createMoreBtn(item, element) {
+function createMoreBtn(item) {
   const moreBtn = document.createElement("button");
   moreBtn.textContent = "еще...";
   moreBtn.id = "moreBtn";
   moreBtn.classList.add("event__data-more-button");
   moreBtn.addEventListener("click", showDataBtn);
-  return item.insertBefore(moreBtn, element);
+  return item.appendChild(moreBtn);
 }
 
 function removeMoreBtn(item) {
@@ -27,51 +26,27 @@ function removeMoreBtn(item) {
   item.removeChild(moreBtn);
 }
 
-function checkDisableBtn(buttons, position) {
-  buttons.forEach((button, index) => {
-    if (index > position) {
-      button.classList.add("event__data-btn_disable");
-    } else if (button.classList.contains("event__data-btn_disable")) {
-      button.classList.remove("event__data-btn_disable");
-    }
-  });
-}
-
 function renderMoreBtn() {
   dataBlocks.forEach((item) => {
-    const blockWidth = item.offsetWidth;
-    const blockHeight = item.offsetHeight;
+    item.offsetHeight;
     const buttons = item.querySelectorAll(".event__data-btn");
-    const optionWidth = item.querySelector(".event__option").offsetWidth;
-    const buttonWidth = item.querySelector(".event__data-btn").offsetWidth;
-    const maxBtnInLine = Math.floor((blockWidth - optionWidth) / buttonWidth);
+    const length = buttons.length;
+    const disButtons = item.querySelectorAll(".event__data-btn_disable");
 
-    let diffBtnQuantity = buttons.length - maxBtnInLine;
-
-    if (
-      diffBtnQuantity === 0 &&
-      blockHeight != 29 &&
-      !item.querySelector("#moreBtn")
-    ) {
-      diffBtnQuantity = +1;
+    if (item.offsetHeight > 29 && !item.querySelector("#moreBtn")) {
+      createMoreBtn(item);
     }
 
-    let newPosition = buttons.length - diffBtnQuantity - 1;
-
-    if (diffBtnQuantity > 0) {
-      if (oldPosition < 0) {
-        createMoreBtn(item, buttons[newPosition]);
-        oldPosition = newPosition;
-        checkDisableBtn(buttons, newPosition);
-      } else if (oldPosition != newPosition && item.querySelector("#moreBtn")) {
-        removeMoreBtn(item);
-        createMoreBtn(item, buttons[newPosition]);
-        oldPosition = newPosition;
-        checkDisableBtn(buttons, newPosition);
+    for (let i = 0; i < length; i++) {
+      if (item.offsetHeight > 29) {
+        buttons.item(length - 1 - i).classList.add("event__data-btn_disable");
+      } else if (disButtons.length != 0 && disButtons.item(i) != null) {
+        disButtons.item(i).classList.remove("event__data-btn_disable");
+        if (item.offsetHeight > 29) {
+          disButtons.item(i).classList.add("event__data-btn_disable");
+          return;
+        }
       }
-    } else if (item.querySelector("#moreBtn")) {
-      removeMoreBtn(item);
-      oldPosition = -1;
     }
   });
 }
