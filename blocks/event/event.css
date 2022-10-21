@@ -1,0 +1,26 @@
+.event {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  width: 100%;
+
+  border: 0.3px solid #828282;
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  margin-bottom: 30px;
+}
+
+.event:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 876px) {
+  .event {
+    flex-direction: row;
+
+    margin-bottom: 59px;
+  }
+}

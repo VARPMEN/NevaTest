@@ -1,0 +1,14 @@
+.event__info-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-right: 19px;
+}
+
+@media (min-width: 876px) {
+  .event__info-block {
+    order: 3;
+    justify-content: flex-start;
+  }
+}

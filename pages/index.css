@@ -1,0 +1,32 @@
+@import url(../vendor/normalize.css);
+
+@import url(../fonts/fonts.css);
+
+@import url(../blocks/page/page.css);
+
+@import url(../blocks/event/event.css);
+@import url(../blocks/event/__image/event__image.css);
+@import url(../blocks/event/__image/_high-vertical/event__image_high-vertical.css);
+@import url(../blocks/event/__activite-tag/event__activite-tag.css);
+@import url(../blocks/event/__activite-tag/_blue/event__activite-tag_blue.css);
+@import url(../blocks/event/__activite-tag/_yellow/event__activite-tag_yellow.css);
+@import url(../blocks/event/__activite-tag/_purple/event__activite-tag_purple.css);
+@import url(../blocks/event/__activite-tag/_disable/event__activite-tag_disable.css);
+@import url(../blocks/event/__info-container/event__info-container.css);
+@import url(../blocks/event/__duration/event__duration.css);
+@import url(../blocks/event/__duration-icon/event__duration-icon.css);
+@import url(../blocks/event/__title/event__title.css);
+@import url(../blocks/event/__options/event__options.css);
+@import url(../blocks/event/__option/event__option.css);
+@import url(../blocks/event/__option-icon/event__option-icon.css);
+@import url(../blocks/event/__option-data-block/event__option-data-block.css);
+@import url(../blocks/event/__data/event__data.css);
+@import url(../blocks/event/__data-btn/event__data-btn.css);
+@import url(../blocks/event/__data-btn/_disable/event__data-btn_disable.css);
+@import url(../blocks/event/__data-more-button/__data-more-button.css);
+@import url(../blocks/event/__info-block/event__info-block.css);
+@import url(../blocks/event/__price-block/event__price-block.css);
+@import url(../blocks/event/__price/event__price.css);
+@import url(../blocks/event/__second-price/event__second-price.css);
+@import url(../blocks/event/__info-button/event__info-button.css);
+@import url(../blocks/event/__info-button/_rounded-rectangle/event__info-button_rounded-rectangle.css);

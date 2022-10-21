@@ -1,0 +1,13 @@
+.event__second-price {
+  font-size: 10px;
+  line-height: 1;
+
+  margin: 0;
+}
+
+@media (min-width: 876px) {
+  .event__second-price {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

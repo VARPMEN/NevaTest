@@ -1,0 +1,21 @@
+.event__image {
+  position: relative;
+  width: 100%;
+
+  background-image: url(../../../images/saint-petersburg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  margin-bottom: 14px;
+  padding-bottom: calc(220 / 342 * 100%);
+}
+
+@media (min-width: 876px) {
+  .event__image {
+    max-width: 473px;
+
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}

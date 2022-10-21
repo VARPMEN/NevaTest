@@ -1,0 +1,12 @@
+.event__price {
+  margin: 0;
+
+  font-size: 36px;
+  line-height: 1;
+}
+
+@media (min-width: 876px) {
+  .event__price {
+    margin-bottom: 1px;
+  }
+}

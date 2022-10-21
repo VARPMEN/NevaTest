@@ -1,0 +1,13 @@
+.event__info-container {
+  padding-left: 12px;
+  padding-bottom: 19px;
+}
+
+@media (min-width: 876px) {
+  .event__info-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 16px 0 26px 21px;
+  }
+}

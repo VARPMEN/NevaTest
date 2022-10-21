@@ -1,0 +1,12 @@
+.event__price-block {
+  display: flex;
+  flex-direction: column;
+  padding-left: 6px;
+}
+
+@media (min-width: 876px) {
+  .event__price-block {
+    padding-left: 0;
+    margin-right: 15px;
+  }
+}

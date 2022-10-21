@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/calculate.css" />
+    <title>Расчитать поездку</title>
+  </head>
+  <body>
+    <div class="calculate">
+      <form name="calculateForm" class="calculate__form">
+        <label for="route" class="calculate__label">Выберите маршрут</label>
+        <select name="route" id="route" class="calculate__select">
+          <option value="default" selected>Выберите маршрут</option>
+          <option value="из A в B">из A в B</option>
+          <option value="из B в A">из B в A</option>
+          <option value="из A в B и обратно в А">из A в B и обратно в А</option>
+        </select>
+        <div class="calculate__disable blockTimeTo">
+          <label for="timeTo" class="calculate__label">Выберите время</label>
+          <select name="timeTo" id="time" class="calculate__select">
+            <option value="18:00">18:00(из A в B)</option>
+            <option value="18:30">18:30(из A в B)</option>
+            <option value="18:45">18:45(из A в B)</option>
+            <option value="19:00">19:00(из A в B)</option>
+            <option value="19:15">19:15(из A в B)</option>
+            <option value="21:00">21:00(из A в B)</option>
+          </select>
+        </div>
+        <div class="calculate__disable blockTimeBack">
+          <label for="timeBack" class="calculate__label">Выберите время</label>
+          <select name="timeBack" id="time" class="calculate__select">
+            <option value="18:30">18:30(из B в A)</option>
+            <option value="18:45">18:45(из B в A)</option>
+            <option value="19:00">19:00(из B в A)</option>
+            <option value="19:15">19:15(из B в A)</option>
+            <option value="19:35">19:35(из B в A)</option>
+            <option value="21:50">21:50(из B в A)</option>
+            <option value="23:55">23:55(из B в A)</option>
+          </select>
+        </div>
+        <label for="num" class="calculate__label">Количество билетов</label>
+        <input id="num" name="inputForm" />
+        <button type="button" name="formButton">Посчитать</button>
+        <p class="messageForm"></p>
+      </form>
+      <a href="./index.html">Вернуться обратно</a>
+    </div>
+
+    <script src="./pages/calculate.js"></script>
+  </body>
+</html>

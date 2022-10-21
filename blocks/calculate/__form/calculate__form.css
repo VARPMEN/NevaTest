@@ -1,0 +1,21 @@
+.calculate__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 30%;
+
+  font-size: 30px;
+
+  padding: 10px 15px 10px 15px;
+  margin-bottom: 30px;
+
+  background-color: lightslategrey;
+}
+
+.calculate__form > button {
+  margin-bottom: 15px;
+}
+
+.calculate__form > p {
+  margin: 0;
+}

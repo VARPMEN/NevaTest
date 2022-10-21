@@ -1,0 +1,33 @@
+.event__info-button {
+  box-sizing: border-box;
+
+  width: 165px;
+  height: 44px;
+
+  border: 0.5px solid #cba500;
+  border-radius: 20px;
+
+  background-color: #fed74b;
+
+  font-size: 14px;
+  line-height: 20px;
+
+  transition: opacity ease-in-out 0.4s;
+}
+
+.event__info-button:hover {
+  cursor: pointer;
+
+  opacity: 0.6;
+}
+
+@media (min-width: 876px) {
+  .event__info-button {
+    width: 187px;
+    height: 52px;
+
+    border-radius: 23px;
+
+    font-size: 18px;
+  }
+}

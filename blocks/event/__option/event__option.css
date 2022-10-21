@@ -1,0 +1,12 @@
+.event__option {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (min-width: 876px) {
+  .event__option {
+    font-size: 18px;
+  }
+}

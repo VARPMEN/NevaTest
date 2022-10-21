@@ -1,0 +1,28 @@
+.event__activite-tag {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: 40px;
+  left: 0;
+  width: 99px;
+  height: 35px;
+
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 20px;
+
+  text-transform: uppercase;
+}
+
+@media (min-width: 876px) {
+  .event__activite-tag {
+    top: 46px;
+    width: 154px;
+    height: 42px;
+
+    font-size: 16px;
+  }
+}

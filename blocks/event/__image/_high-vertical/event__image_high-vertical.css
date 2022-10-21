@@ -1,0 +1,9 @@
+.event__image_high-vertical {
+  padding-bottom: calc(284 / 342 * 100%);
+}
+
+@media (min-width: 876px) {
+  .event__image_high-vertical {
+    padding-bottom: 0;
+  }
+}

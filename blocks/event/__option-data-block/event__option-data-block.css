@@ -1,0 +1,14 @@
+.event__option-data-block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.event__option-data-block > .event__option {
+  margin-bottom: 9px;
+}
+
+@media (min-width: 876px) {
+  .event__option-data-block > .event__option {
+    margin-right: 9px;
+  }
+}

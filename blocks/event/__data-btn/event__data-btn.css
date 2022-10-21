@@ -1,0 +1,33 @@
+.event__data-btn {
+  width: 63px;
+  height: 24px;
+
+  box-sizing: border-box;
+  border: none;
+  border-radius: 11px;
+  background-color: #d9e8ff;
+
+  margin-right: 6px;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 20px;
+
+  transition: background-color ease-in-out 0.4s;
+}
+
+.event__data-btn:hover {
+  cursor: pointer;
+
+  background-color: #6ba6ff;
+  color: #ffffff;
+}
+
+@media (min-width: 876px) {
+  .event__data-btn {
+    width: 73px;
+    height: 28px;
+
+    font-size: 16px;
+  }
+}
