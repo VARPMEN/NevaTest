@@ -1,5 +1,6 @@
-const dataBlocks = document.querySelectorAll(".event__option-data-block");
+const dataBlocks = document.querySelectorAll(".event__option-data-block"); // находим все элементы где возможно необходима кнопка
 
+//функция раскрытия скрытых кнопок
 function showDataBtn(e) {
   e.preventDefault();
   e.target
@@ -11,6 +12,7 @@ function showDataBtn(e) {
   e.target.classList.add("event__data-btn_disable");
 }
 
+// функция создания кнопки
 function createMoreBtn(item) {
   const moreBtn = document.createElement("button");
   moreBtn.textContent = "еще...";
@@ -20,12 +22,7 @@ function createMoreBtn(item) {
   return item.appendChild(moreBtn);
 }
 
-function removeMoreBtn(item) {
-  const moreBtn = item.querySelector("#moreBtn");
-  moreBtn.removeEventListener("click", showDataBtn);
-  item.removeChild(moreBtn);
-}
-
+// функция отображения кнопок
 function renderMoreBtn() {
   dataBlocks.forEach((item) => {
     item.offsetHeight;
@@ -51,8 +48,9 @@ function renderMoreBtn() {
   });
 }
 
-renderMoreBtn();
+renderMoreBtn(); // первый рендер кнопок
 
+// вызов слушателя для отслеживания корректного отображения кнопок при изменении ширины экрана
 window.addEventListener("resize", (e) => {
   e.preventDefault();
   renderMoreBtn();
